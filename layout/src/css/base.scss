@@ -1,0 +1,51 @@
+$fontSize:75;
+$imgUrl:'../images/';
+
+@function pxToRem($size){
+    @if($size>0){
+        @return  $size/$fontSize * 1rem;
+    } @else {
+        @return 0;
+    }
+}
+
+@mixin setContentSize($width:750,$height:750){
+    width:pxToRem($width);
+    height:pxToRem($height);
+}
+
+@mixin setBackground($url,$size:contain,$repeat:no-repeat){
+    background: {
+        image:url(#{$url});
+        size:$size;
+        repeat:$repeat;
+    }
+}
+
+@mixin setPos($name:absolute){
+    position: $name;
+}
+
+@mixin setPositionLT($left:0,$top:0){
+    @include setPos(absolute);
+    left:pxToRem($left);
+    top:pxToRem($top);
+}
+
+@mixin setPositionRT($right:0,$top:0){
+    @include setPos(absolute);
+    right:pxToRem($right);
+    top:pxToRem($top);
+}
+
+@mixin setPositionLB($left:0,$bottom:0){
+    @include setPos(absolute);
+    left:$left;
+    bottom: $bottom;
+}
+
+@mixin setPositionRB($right:0,$bottom:0){
+    @include setPos(absolute);
+    right: $right;
+    bottom: $bottom;
+}

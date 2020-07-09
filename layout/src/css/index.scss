@@ -1,0 +1,15 @@
+@import './base.scss';
+*{margin: 0; padding: 0;}
+body{ font-size: pxToRem(16); font-family: "Microsoft YaHei";}
+.bg{
+    @include setContentSize(750,1392);
+    @include setBackground('#{$imgUrl}1.jpg');
+    margin: 0 auto;
+}
+.inner{
+    @include setContentSize(550,248);
+    @include setBackground('#{$imgUrl}1.jpg');
+    @include setPositionLT(30,130);
+}
+
+

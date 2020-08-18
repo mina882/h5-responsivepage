@@ -1,5 +1,5 @@
 # h5-responsivepage
-采用rem来布局移动端的页面，用webpack来打包，步骤一下16
+采用rem来布局移动端的页面，用webpack来打包，步骤一下20
 
 npm install
 

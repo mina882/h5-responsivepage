@@ -6,4 +6,3 @@ npm install
 npm run dev 
 
 npm run build
-踩踩踩
